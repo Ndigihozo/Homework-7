@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Homework__7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HourGlass" translatesAutoresizingMaskIntoConstraints="NO" id="bG9-AA-4eZ">
+                                <rect key="frame" x="0.0" y="164" width="393" height="654"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xZa-8u-8O3" appends="YES" id="Rbw-da-pIc"/>
+                                    <outletCollection property="gestureRecognizers" destination="byV-X0-IRh" appends="YES" id="XAa-JC-LjJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="oLu-7q-uyx" appends="YES" id="TTB-QO-jar"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap, Zoom and Rotate to flexibly observe the image of the life cycle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhG-Xw-gaT">
+                                <rect key="frame" x="16" y="51" width="361" height="89"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PhG-Xw-gaT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3oW-WL-e3P"/>
+                            <constraint firstItem="bG9-AA-4eZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="7qk-Xu-R2M"/>
+                            <constraint firstItem="bG9-AA-4eZ" firstAttribute="top" secondItem="PhG-Xw-gaT" secondAttribute="bottom" constant="24" id="Ajr-WI-xTe"/>
+                            <constraint firstItem="bG9-AA-4eZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ihi-uQ-dgZ"/>
+                            <constraint firstItem="PhG-Xw-gaT" firstAttribute="centerX" secondItem="bG9-AA-4eZ" secondAttribute="centerX" id="aJ8-WM-7rL"/>
+                            <constraint firstItem="bG9-AA-4eZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bMZ-Gq-IRT"/>
+                            <constraint firstItem="bG9-AA-4eZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gOg-OC-5wR"/>
+                            <constraint firstItem="PhG-Xw-gaT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-8" id="q2Q-2A-kZh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bG9-AA-4eZ" id="xlX-1j-Msa"/>
+                        <outlet property="messageLabel" destination="PhG-Xw-gaT" id="bQ7-8Q-O2r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xZa-8u-8O3">
+                    <connections>
+                        <action selector="foundTap:" destination="BYZ-38-t0r" id="bvR-hB-Qkt"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="byV-X0-IRh">
+                    <connections>
+                        <action selector="foundPinch:" destination="BYZ-38-t0r" id="jIf-gs-Et5"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="oLu-7q-uyx">
+                    <connections>
+                        <action selector="foundRotate:" destination="BYZ-38-t0r" id="xyK-9T-Oyn"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="100" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HourGlass" width="563" height="692"/>
+    </resources>
+</document>
